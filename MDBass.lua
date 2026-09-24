@@ -1,14 +1,6 @@
 -- MDBass
--- Machinedrum Tone generator
 -- 
 -- HANJO, Tokyo, Japan.
--- (unofficial OS "X", TONAL pitch)
---
--- One track. Every note step sends:
---   1. CC on the track's MIDI channel
---      -> Synth parameter 1 (PTCH),
---      scale-quantized
---   2. a trigger note
 --
 -- E1: target track (1-16)
 -- E2: select parameter
@@ -17,35 +9,19 @@
 -- K3: regenerate bassline
 --
 -- hold K1 (shift):
--- K1+K2: audition root + octave
---        (use to calibrate tuning)
+-- K1+K2:  root + octave
+--        (to confirm tuning)
 -- K1+K3: mutate once
 -- K1+E2: select step / preview its CC
 --
 -- MACHINEDRUM SETUP
---  * MD base channel = "MD base channel"
---    param (default 1). Track t listens
---    for CC on base + (t-1)//4.
---  * On the target track use a machine
---    with tuning and set its tonality
---    to TONAL (EDIT KIT > tuning).
---  * Calibrate: K1+K2 plays the root and
---    the octave above. Adjust
---    "tune: CC @ C2" until the root is
---    right, and "CC steps per semitone"
---    (1 or 2) until the second note is
---    exactly one octave up.
+--  * Use a machine
+--    with Pitch set TONAL
+--    (EDIT KIT > tuning).
 --
 -- RECORD MODE (E2 > MODE > REC)
---  K2 runs ONE clean 16-step take:
---  (optional) rec-arm note, bar-aligned
---  MIDI START, count-in bar(s), 16 steps,
---  MIDI STOP. PROB% / EVOLVE% ignored.
---  MD: external clock + transport in,
---  norns CLOCK menu: MIDI clock out
---  to the MD, empty 16-step pattern,
---  REC armed (by hand or via a note
---  mapped in MAP EDITOR > CTRL).
+--  K2 runs ONE clean :
+--  16-step take
 
 local util = require "util"
 local musicutil = require "musicutil"
