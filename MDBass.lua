@@ -1,4 +1,4 @@
--- MDBass
+-- MDBass v1.0
 -- 
 -- HANJO, Tokyo, Japan.
 --
